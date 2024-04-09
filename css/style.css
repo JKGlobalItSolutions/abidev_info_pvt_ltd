@@ -500,7 +500,7 @@ section .panel-heading:before {
 }
 /*========= Home Our Numbers  ==========*/
 #numbers{
-	background: url(../images/banner11.jpg) repeat scroll center 0/cover;
+	background: url(images/banner11.jpg) repeat scroll center 0/cover;
 	padding-bottom: 75px;
 }
 #numbers .counter_box .counter_number {

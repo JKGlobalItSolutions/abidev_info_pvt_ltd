@@ -8080,7 +8080,7 @@ textarea.form-control-lg {
 
 .text-white {
   --bs-text-opacity: 1;
-  color: black !important;
+  color: white !important;
 }
 
 .text-body {
