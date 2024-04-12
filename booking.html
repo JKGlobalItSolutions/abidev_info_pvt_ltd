@@ -147,7 +147,8 @@
               </nav>
         </header>
         <main>
-            <div class="top-section p-4 ms-5 mt-1">
+            <div class="container">
+              <div class="top-section pt-4  mt-1">
                 <nav aria-label="breadcrumb" class="text-center">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.html" style="text-decoration: none;"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -157,6 +158,83 @@
                 <h2 class="bg-dark text-white p-3 rounded"><b>Book Service Now</b></h2>
                 </nav>
               </div>
+              <br>
+              <div class="booking-form">
+                <div class="eapps-form-header-container d-flex  justify-content align-items-lg-center" eapps-link="headerContainer">
+                  <div class="eapps-form-header-picture p-3 bg-info rounded-circle m-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">  <path id="a" d="M23 5.983V18c0 1.652-1.348 3-3 3H4c-1.652 0-3-1.348-3-3V6.012v-.03A3.006 3.006 0 0 1 4 3h16a3.006 3.006 0 0 1 3 2.983zm-2.106-.43A1.006 1.006 0 0 0 20 5H4c-.388 0-.728.227-.893.554L12 11.779l8.894-6.225zM21 7.922l-8.426 5.898a1 1 0 0 1-1.147 0L3 7.921V18c0 .548.452 1 1 1h16c.548 0 1-.452 1-1V7.92z"></path>  <g fill-rule="evenodd"> <use fill-rule="nonzero" xlink:href="%23a"></use> </g> </svg>
+                  </div>
+                  <div class="eapps-form-header-info">             
+                          <div class="eapps-form-header-title">Book Now</div>
+                          <div class="eapps-form-header-text">Leave your message and we'll get back to you shortly.</div>
+                  </div>
+              </div>
+              <br>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">Service</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>AC Service</option>
+                    <option>CCTV Instalination</option>
+                    <option>Desktop And Laptop Mother Board Chip Level Service</option>
+                    <option>Electrical works</option>
+                    <option>Fridge Service</option>
+                    <option>Hardware And Networking</option>
+                    <option>LED TV And Home Appliences Service</option>
+                    <option>Mobile Service</option>
+                    <option>Printer Service</option>
+                    <option>RO Instalination And Service</option>
+                    <option>Washing Machine Service</option>
+                    <option>Xerox Machine Service</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid Service.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Location</label>
+                  <input type="text" class="form-control" id="validationCustom02" value="Ooty" required>
+                  <div class="valid-feedback">
+                    Please enter Your Location
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Please provide a Your name.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Please provide a email.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Phone</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a Phone.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Message</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a Your message.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary p-2" type="submit">Submit form</button>
+                </div>
+              </form>
+            </div>
         </main>
         <footer>
             <!-- place footer here -->
@@ -175,3 +253,25 @@
         ></script>
     </body>
 </html>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
