@@ -202,11 +202,7 @@
                     href="booking.html"
                     ><b>Booking</b></a
                   >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
+                </li> 
                     href="Contact/contact.html"
                     ><b>Contact us</b></a
                   >
@@ -323,7 +319,7 @@
               </div>
             </div>
             <div class="mb-3 text-center">
-              <button onclick="sendemail()" class="btnx" type="button">
+              <button onclick="sendData()" class="btnx" type="button">
                 Send
               </button>
             </div>
@@ -409,6 +405,30 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      function sendData() {
+    sendMessage();
+    sendemail();
+    }
+    function sendMessage() {
+    var phonenumber = "+9655569355"; // Your WhatsApp phone number
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+    var service = document.getElementById("service").value;
+    var location = document.getElementById("location").value;
+
+    var url = "https://wa.me/" + phonenumber + "?text=" +
+      "Name: " + name + "%0a" +
+      "Email: " + email + "%0a" +
+      "Phone: " + phone + "%0a" +
+      "Message: " + message + "%0a" +
+      "service: " + service + "%0a" +
+      "location: " + location + "%0a" +
+      "This message is sent via the contact form on our website.";
+
+    window.open(url, '_blank').focus();
+  }
       function sendemail() {
         var service = document.getElementById("service").value;
         var location = document.getElementById("location").value;
