@@ -258,72 +258,57 @@
         </div>
         <br />
         <div class="form-container container">
-          <form>
+          <form id="myForm">
             <div class="mb-3 form-row">
-              <div class="mr-3 form-col">
-                <label for="validationCustom04" class="form-label"
-                  >Service</label
-                >
-                <select class="form-select" id="service">
-                  <option selected disabled value="">Choose...</option>
-                  <option>AC Service</option>
-                  <option>CCTV Instalination</option>
-                  <option>
-                    Desktop And Laptop Mother Board Chip Level Service
-                  </option>
-                  <option>Electrical works</option>
-                  <option>Fridge Service</option>
-                  <option>Hardware And Networking</option>
-                  <option>LED TV And Home Appliences Service</option>
-                  <option>Mobile Service</option>
-                  <option>Printer Service</option>
-                  <option>RO Instalination And Service</option>
-                  <option>Washing Machine Service</option>
-                  <option>Xerox Machine Service</option>
-                </select>
-              </div>
-              <div class="form-col">
-                <label for="validationCustom02" class="form-label"
-                  >Location</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="location"
-                  value="Tiruvannamalai"
-                />
-              </div>
+                <div class="mr-3 form-col">
+                    <label for="validationCustom04" class="form-label">Service</label>
+                    <select class="form-select" id="service">
+                      <option selected="" disabled="" value="">Choose...</option>
+                      <option>AC Service</option>
+                      <option>CCTV Instalination</option>
+                      <option>
+                        Desktop And Laptop Mother Board Chip Level Service
+                      </option>
+                      <option>Electrical works</option>
+                      <option>Fridge Service</option>
+                      <option>Hardware And Networking</option>
+                      <option>LED TV And Home Appliences Service</option>
+                      <option>Mobile Service</option>
+                      <option>Printer Service</option>
+                      <option>RO Instalination And Service</option>
+                      <option>Washing Machine Service</option>
+                      <option>Xerox Machine Service</option>
+                    </select>
+                </div>
+                <div class="form-col">
+                    <label for="validationCustom02" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" value="Tiruvannamalai" required />
+                </div>
             </div>
             <div class="mb-3 form-row">
-              <div class="mr-3 form-col">
-                <label for="name_input">Name:</label>
-                <input type="text" name="name" id="name" placeholder="Name" />
-              </div>
-              <div class="form-col">
-                <label>Email:</label>
-                <input type="email" placeholder="name@website.com" id="email" />
-              </div>
+                <div class="mr-3 form-col">
+                    <label for="name_input">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Name" required />
+                </div>
+                <div class="form-col">
+                    <label>Email:</label>
+                    <input type="email" placeholder="name@website.com" id="email" required />
+                </div>
             </div>
             <div class="mb-3 form-row">
-              <div class="mr-3 form-col">
-                <label for="validationCustom05" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="phone" />
-              </div>
-              <div class="form-col">
-                <label>Message:</label>
-                <textarea
-                  rows="6"
-                  class="w-full border border-gray"
-                  id="message"
-                ></textarea>
-              </div>
+                <div class="mr-3 form-col">
+                    <label for="validationCustom05" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" required />
+                </div>
+                <div class="form-col">
+                    <label>Message:</label>
+                    <textarea rows="6" class="w-full border border-gray" id="message" required></textarea>
+                </div>
             </div>
             <div class="mb-3 text-center">
-              <button onclick="sendData()" class="btnx" type="button">
-                Send
-              </button>
+                <button type="submit" class="btnx">Send</button>
             </div>
-          </form>
+        </form>
         </div>
       </div>
     </main>
@@ -405,26 +390,33 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function sendData() {
-    sendMessage();
-    sendemail();
-    }
-    function sendMessage() {
-    var phonenumber = "+9655569355"; // Your WhatsApp phone number
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var message = document.getElementById("message").value;
-    var service = document.getElementById("service").value;
-    var location = document.getElementById("location").value;
+    //   function sendData() {
+    // sendMessage();
+    
+  //  
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        sendMessage(); // Call the sendMessage function
+        sendemail();
 
-    var url = "https://wa.me/" + phonenumber + "?text=" +
+    });
+
+    function sendMessage() {
+        var phonenumber = "+9655569355"; // Your WhatsApp phone number
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+        var service = document.getElementById("service").value;
+        var location = document.getElementById("location").value;
+
+  var url = "https://wa.me/" + phonenumber + "?text=" +
       "Name: " + name + "%0a" +
       "Email: " + email + "%0a" +
       "Phone: " + phone + "%0a" +
       "Message: " + message + "%0a" +
-      "service: " + service + "%0a" +
-      "location: " + location + "%0a" +
+      "Service: " + service + "%0a" +
+      "Location: " + location + "%0a" +
       "This message is sent via the contact form on our website.";
 
     window.open(url, '_blank').focus();
