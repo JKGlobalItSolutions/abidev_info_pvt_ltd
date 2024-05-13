@@ -25,6 +25,7 @@
         emailjs.init("HNExEsPOWIQ0tnlqL");
       })();
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
@@ -33,8 +34,8 @@
         class="container d-flex justify-content-center justify-content-md-between"
       >
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center p-1"><a href="mailto:contact@example.com" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-envelope"></i>support@abidevtechno.in</b></h7></a></i>
-          <i class="bi bi-envelope d-flex align-items-center p-1"><a href="mailto:contact@example.com" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-phone"></i></i>+919655569355</b></h7></a></i>
+          <i class="bi bi-envelope d-flex align-items-center p-1"><a href="" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-envelope"></i>support@abidevtechno.in</b></h7></a></i>
+          <i class="bi bi-envelope d-flex align-items-center p-1"><a href="tel:9655569355" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-phone"></i></i>+919655569355</b></h7></a></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center p-1"
@@ -377,6 +378,51 @@
         </div>
       </div>
     </footer>
+     <!-- phone button start  -->
+	<style>
+		.call-button {
+		  position: fixed;
+		  bottom: 120px;
+		  right: 20px; /* Adjusted to be on the right side */
+		}
+		.call-button a {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 50px;
+		  width: 50px;
+		  border-radius: 50%;
+		  background-color: #28a745; /* Green color */
+		}
+		.call-button a:hover {
+		  background-color: #218838; /* Dark green color on hover */
+		}
+		.call-button a i {
+		  color: white !important; /* Ensure that color overrides work */
+		  font-size: 24px;
+		}
+	  </style>
+	  <a href="tel:9655569355" type="button" class="btn call-button btn-success rounded-circle" >
+		<i class="fa-solid fa-phone"></i>
+	  </a>
+	<!-- phone button end -->
+
+	<!-- whatsapp button  start -->
+	<a href="https://api.whatsapp.com/send?phone=9655569355" target="_blank" class="btn btn-success whatsapp-button">
+		<i class="fa-brands fa-whatsapp"></i>
+	  </a>
+	  <style>
+		/* Custom styles */
+		.whatsapp-button {
+		  position: fixed;
+		  font-weight: 200px;
+		  font-size: large;
+		  bottom: 20px;
+		  left: 20px;
+		  z-index: 9999;
+		  border-radius: 50%;
+		}
+	  </style>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

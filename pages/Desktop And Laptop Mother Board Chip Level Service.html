@@ -47,7 +47,7 @@
       </div>
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center p-1"><a href="" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-envelope"></i>support@abidevtechno.in</b></h7></a></i>
-        <i class="bi bi-envelope d-flex align-items-center p-1"><a href="" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-phone"></i></i>+919655569355</b></h7></a></i>
+        <i class="bi bi-envelope d-flex align-items-center p-1"><a href="tel:9655569355" class="text-dark" style="text-decoration: none;"><h7><b><i class="fa-solid fa-phone"></i></i>+919655569355</b></h7></a></i>
       </div>
     </div>
   </section>
@@ -366,6 +366,51 @@
     </div>
   </div>
 </footer>
+ <!-- phone button start  -->
+ <style>
+  .call-button {
+    position: fixed;
+    bottom: 120px;
+    right: 20px; /* Adjusted to be on the right side */
+  }
+  .call-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #28a745; /* Green color */
+  }
+  .call-button a:hover {
+    background-color: #218838; /* Dark green color on hover */
+  }
+  .call-button a i {
+    color: white !important; /* Ensure that color overrides work */
+    font-size: 24px;
+  }
+  </style>
+  <a href="tel:9655569355" type="button" class="btn call-button btn-success rounded-circle" >
+  <i class="fa-solid fa-phone"></i>
+  </a>
+<!-- phone button end -->
+
+<!-- whatsapp button  start -->
+<a href="https://api.whatsapp.com/send?phone=9655569355" target="_blank" class="btn btn-success whatsapp-button">
+  <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <style>
+  /* Custom styles */
+  .whatsapp-button {
+    position: fixed;
+    font-weight: 200px;
+    font-size: large;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    border-radius: 50%;
+  }
+  </style>
     <!-- End of .container -->
     <!-- Bootstrap core JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
