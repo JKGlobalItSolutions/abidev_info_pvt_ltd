@@ -837,7 +837,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45aee7', end
 /*========= Footer  ==========*/
 footer{
 	background-color:#444;
-	color:#FFF;
+	/* color:#FFF; */
 	padding-top:30px;
 -webkit-box-shadow: inset 0px 9px 19px -10px rgba(0, 0, 0, 0.87);
 -moz-box-shadow:    inset 0px 9px 19px -10px rgba(0, 0, 0, 0.87);
@@ -856,10 +856,10 @@ footer ul li,
 footer ul li a,
 footer ul li a:focus,
 footer p{
-	color:#FFF;	
+	/* color:#FFF;	 */
 }
 footer ul li a:hover{
-	color:#fff;
+	/* color:#fff; */
 	text-decoration-line: unset;
 }
 footer .footerbg p{
@@ -888,7 +888,7 @@ footer h4{
     margin: 0 0 15px;
 }
 .bottom-footer{
-	background-color:#353535;
+	/* background-color:#353535; */
 	margin-top:40px;
 	padding: 15px 0;
 }
